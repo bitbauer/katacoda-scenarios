@@ -1,6 +1,9 @@
 {
+  "pathwayTitle": "Ansible Guide",
   "title": "Ansible - Get Started",
   "description": "Ansible Tutorial starting with writing playbooks, structure roles with ansible-galaxy and automating tests",
+  "difficulty": "beginner",
+  "time": "0-5 minutes",
   "details": {
     "steps": [
       {
@@ -27,6 +30,6 @@
     "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "docker"
+    "imageid": "ansible"
   }
 }
