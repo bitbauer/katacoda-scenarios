@@ -14,10 +14,9 @@ Let's start with a simple form of an inventory for now. After installation, ther
 
 Now create a hosts inventory file simply looked like this:
 
-<pre><code>
-[local]
+<pre class="file">[local]
 127.0.0.1 ansible_connection=local
-</code></pre>
+</pre>
 
 `echo -e '[local]\n127.0.0.1 ansible_connection=local' >/etc/ansible/hosts`{{execute HOST1}}
 

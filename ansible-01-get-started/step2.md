@@ -12,14 +12,13 @@ They can be used to manage configurations of and deployments to remote machines.
 Let's do some work.
 
 There is a prepared playbook implementing the connection test we did in the last chapter.
-<pre><code>
----
+<pre class="file">---
 - hosts: all
   remote_user: root
   tasks:
     - name: test connection
       ping:
-</code></pre>
+</pre>
 
 `ansible-playbook ping.yml`{{execute HOST1}}
 

@@ -34,7 +34,7 @@
     "host01": [
       {
         "file": "*",
-        "target": "/root"
+        "target": "~/tutorial/"
       }
     ]
   },
