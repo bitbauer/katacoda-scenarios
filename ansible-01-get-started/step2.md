@@ -4,17 +4,27 @@ The code that define state of target system and executions to get it right.
 The variables to make code usable for more than one system and for various scenarios.
 File resources that can be used in the code to make some cases easier.
 
-Let's do some work.
-
 ## Playbooks
 
 Ansible Playbooks are the code. It is implemented in a declarative language in YAML files.
 They can be used to manage configurations of and deployments to remote machines.
 
+Let's do some work.
 
+There is a prepared playbook implementing the connection test we did in the last chapter.
+<pre><code>
+---
+- hosts: all
+  remote_user: root
+  tasks:
+    - name: test connection
+      ping:
+</code></pre>
 
+`ansible-playbook ping.yml`{{execute HOST1}}
 
-Playbooks
+For each play in a playbook, you get to choose which machines in your infrastructure to target and what remote user to complete the steps (called tasks) as. For better structure we recommend to separate each play in a different playbook file.
+
 
 ## Add variables for flexibility
 
