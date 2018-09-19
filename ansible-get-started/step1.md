@@ -16,7 +16,7 @@ Now create a hosts inventory file simply looked like this:
 
 <pre><code>
 [local]
-127.0.0.1
+127.0.0.1 ansible_connection=local
 </code></pre>
 
 `echo -e '[local]\n127.0.0.1 ansible_connection=local' >/etc/ansible/hosts`{{execute HOST1}}
@@ -24,7 +24,3 @@ Now create a hosts inventory file simply looked like this:
 Now you can test your inventory. Simply ping all nodes for this.
 
 `ansible all -m ping`{{execute HOST1}}
-
-## Task
-
-...
