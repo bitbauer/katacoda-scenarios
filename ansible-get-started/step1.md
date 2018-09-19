@@ -3,7 +3,11 @@ It can automates cloud provisioning, system configuration, application deploymen
 
 ## Initialize workspace
 
-Ansible will lookup for target host that are listed in inventories. Ansible inventories are covered in another tutorial.
+Ansible needs to be installed on the control node. Packages are available for Ubuntu 16.04+, CentOS 7 and more distributions.
+
+`apt-get update && apt-get install ansible`{{execute HOST1}}
+
+When executed, Ansible will lookup for target host that are listed in inventories. We will cover inventories in another tutorial.
 Let's start with a simple form of an inventory for now. After installation, there's an example inventory file you can reference at /etc/ansible/hosts. Move the default one so we can reference it later.
 
 `sudo mv /etc/ansible/hosts /etc/ansible/hosts.default`{{execute HOST1}}
