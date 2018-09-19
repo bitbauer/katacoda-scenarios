@@ -34,7 +34,7 @@
     "host01": [
       {
         "file": "*",
-        "target": "~/tutorial/"
+        "target": "/home/scrapbook/tutorial/"
       }
     ]
   },
