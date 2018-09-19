@@ -33,7 +33,7 @@
   "assets": {
     "host01": [
       {
-        "file": "*",
+        "file": "ping.yml",
         "target": "/home/scrapbook/tutorial/"
       }
     ]
