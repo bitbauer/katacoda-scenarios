@@ -31,7 +31,7 @@
     "uilayout": "terminal"
   },
   "assets": {
-    "host01": [
+    "client": [
       {
         "file": "ping.yml",
         "target": "/tmp/"
