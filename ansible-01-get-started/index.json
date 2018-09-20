@@ -34,7 +34,7 @@
     "host01": [
       {
         "file": "ping.yml",
-        "target": "/home/scrapbook/tutorial/"
+        "target": "/tmp/"
       }
     ]
   },
