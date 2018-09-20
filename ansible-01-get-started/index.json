@@ -31,10 +31,10 @@
     "uilayout": "terminal"
   },
   "assets": {
-    "client": [
+    "host01": [
       {
         "file": "ping.yml",
-        "target": "/home/scrapbook/"
+        "target": "~/"
       }
     ]
   },
