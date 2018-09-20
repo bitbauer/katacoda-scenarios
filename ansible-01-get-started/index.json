@@ -25,18 +25,18 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+      "client": [
+        {
+          "file": "ping.yml",
+          "target": "~/"
+        }
+      ]
     }
   },
   "environment": {
     "uilayout": "terminal"
-  },
-  "assets": {
-    "host01": [
-      {
-        "file": "ping.yml",
-        "target": "~/"
-      }
-    ]
   },
   "backend": {
     "imageid": "docker"
