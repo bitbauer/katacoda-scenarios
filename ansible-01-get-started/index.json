@@ -34,7 +34,7 @@
     "client": [
       {
         "file": "ping.yml",
-        "target": "/tmp/"
+        "target": "/home/scrapbook/"
       }
     ]
   },
