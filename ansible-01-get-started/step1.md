@@ -13,13 +13,9 @@ Let's start with a simple form of an inventory for now. After installation, ther
 `mv /etc/ansible/hosts /etc/ansible/hosts.default`{{execute HOST1}}
 
 Now create a hosts inventory file simply looked like this:
-
-<pre class="file">[local]
+<pre class="file" data-filename="/etc/ansible/hosts" data-target="replace">[local]
 127.0.0.1 ansible_connection=local
 </pre>
 
-`echo -e '[local]\n127.0.0.1 ansible_connection=local' >/etc/ansible/hosts`{{execute HOST1}}
-
 Now you can test your inventory. Simply ping all nodes for this.
-
 `ansible all -m ping`{{execute HOST1}}

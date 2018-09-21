@@ -18,6 +18,10 @@ There is a prepared playbook implementing the connection test we did in the last
   tasks:
     - name: test connection
       ping:
+      register: result
+    - name: show result
+      debug:
+        var: result
 </pre>
 
 `ansible-playbook ping.yml`{{execute HOST1}}
