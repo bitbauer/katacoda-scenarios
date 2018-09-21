@@ -29,7 +29,7 @@
         restart_policy: always
         env: "{{ postgres_container_env }}"
         volumes_from: "{{ [postgres_container_datavolume] }}"
-      exposed_ports: "{{ [postgres_container_port] }}"
+        exposed_ports: "{{ [postgres_container_port] }}"
 
     - name: inspect postgres container
       command: >
@@ -38,8 +38,10 @@
         {{ postgres_container_name }}
       register: postgres_address_result
 
-    - set_fact: postgres_container_address={{ postgres_address_result.stdout }}
-    - postgres_user:
+    - set_fact:
+        postgres_container_address: "{{ postgres_address_result.stdout }}"
+
+    - postgresql_user:
         name: foo
         login_user: postgres
         login_host: "{{ postgres_container_address }}"
