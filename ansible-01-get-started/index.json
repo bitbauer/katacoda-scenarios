@@ -30,13 +30,13 @@
       "client": [
         {
           "file": "*",
-          "target": "~/"
+          "target": "~/tutorial/"
         }
       ]
     }
   },
   "files": [
-     "ping.yml"
+     "~/tutorial/ping.yml"
   ],
   "environment": {
     "uilayout": "editor-terminal",
