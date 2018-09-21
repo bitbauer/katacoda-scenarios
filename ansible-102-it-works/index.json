@@ -1,6 +1,6 @@
 {
   "pathwayTitle": "Ansible Guide",
-  "title": "Ansible - 02 It Works!",
+  "title": "Ansible 102 - It Works!",
   "description": "Ansible Tutorial Part 2 - starting with writing playbooks, structure roles with ansible-galaxy and automating tests",
   "details": {
     "steps": [

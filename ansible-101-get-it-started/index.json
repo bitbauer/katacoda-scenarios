@@ -1,6 +1,6 @@
 {
   "pathwayTitle": "Ansible Guide",
-  "title": "Ansible - 01 Get It Started",
+  "title": "Ansible 101 - Get It Started",
   "description": "Ansible Tutorial Part 1 - starting with writing playbooks, structure roles with ansible-galaxy and automating tests",
   "difficulty": "beginner",
   "time": "5 minutes",
