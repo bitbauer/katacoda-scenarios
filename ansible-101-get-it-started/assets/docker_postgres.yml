@@ -1,0 +1,45 @@
+- hosts: local
+  remote_user: root
+  vars:
+    postgres_version: 9.5
+    postgres_container_datavolume: dbstore
+    postgres_container_name: postgres
+    postgres_container_port: 5432
+    postgres_container_env:
+      POSTGRES_PASSWORD: pg_admin_pw
+      POSTGRES_USER: pg_admin_user
+      PGDATA: /var/lib/postgresql/data/pgdata
+      POSTGRES_DB: pg_default_db
+      POSTGRES_INITDB_ARGS: "--data-checksums"
+  tasks:
+    - name: create postgresql data volume
+      docker_container:
+        name: "{{ postgres_container_datavolume }}"
+        image: "postgres:{{ postgres_version }}"
+        state: present
+        volumes:
+          - /var/lib/postgresql/data
+        command: "true"
+
+    - name: create postgresql container
+      docker_container:
+        name: "{{ postgres_container_name }}"
+        image: "postgres:{{ postgres_version }}"
+        state: started
+      restart_policy: always
+      env: "{{ postgres_container_env }}"
+      volumes_from: "{{ [postgres_container_datavolume] }}"
+      exposed_ports: "{{ [postgres_container_port] }}"
+
+    - name: inspect postgres container
+      command: >
+        docker inspect --type=container
+        --format='{{ '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' }}'
+        {{ postgres_container_name }}
+      register: postgres_address_result
+
+    - set_fact: postgres_container_address={{ postgres_address_result.stdout }}
+    - postgres_user:
+        name: foo
+        login_user: postgres
+        login_host: "{{ postgres_container_address }}"

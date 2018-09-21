@@ -1,0 +1,20 @@
+- hosts: all
+  remote_user: root
+  pretasks:
+    - apt:
+        name: docker-py
+        state: latest
+        install_recommends: no
+
+- name: Include a play after another play
+  include: docker_postgres.yaml
+
+- hosts: local
+  remote_user: root
+  tasks:
+    - name: test connection
+      ping:
+      register: result
+    - name: show result
+      debug:
+        var: result
