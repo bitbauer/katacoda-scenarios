@@ -1,13 +1,13 @@
 - hosts: all
   remote_user: root
-  pretasks:
+  pre_tasks:
     - apt:
         name: docker-py
         state: latest
         install_recommends: no
 
 - name: Include a play after another play
-  include: docker_postgres.yaml
+  include: docker_postgres.yml
 
 - hosts: local
   remote_user: root
