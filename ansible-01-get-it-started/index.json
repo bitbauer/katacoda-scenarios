@@ -36,7 +36,7 @@
     }
   },
   "files": [
-     "~/tutorial/ping.yml"
+     "ping.yml"
   ],
   "environment": {
     "uilayout": "editor-terminal",
