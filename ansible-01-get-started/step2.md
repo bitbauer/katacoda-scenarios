@@ -12,7 +12,7 @@ They can be used to manage configurations of and deployments to remote machines.
 Let's do some work.
 
 There is a prepared playbook implementing the connection test we did in the last chapter.
-<pre class="file">---
+<pre class="file" data-filename="ping.yml" data-target="replace">---
 - hosts: all
   remote_user: root
   tasks:

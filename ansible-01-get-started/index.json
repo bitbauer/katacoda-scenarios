@@ -1,9 +1,9 @@
 {
   "pathwayTitle": "Ansible Guide",
-  "title": "Ansible - 01 Get Started",
+  "title": "Ansible - 01 Get It Started",
   "description": "Ansible Tutorial Part 1 - starting with writing playbooks, structure roles with ansible-galaxy and automating tests",
   "difficulty": "beginner",
-  "time": "0-5 minutes",
+  "time": "5 minutes",
   "details": {
     "steps": [
       {
@@ -29,17 +29,17 @@
     "assets": {
       "client": [
         {
-          "file": "ping.yml",
+          "file": "*",
           "target": "~/"
         }
       ]
     }
   },
-  "files": [
-      "/etc/ansible/hosts"
-  ],
+  "files": [ "*" ],
   "environment": {
-    "uilayout": "terminal"
+    "uilayout": "editor-terminal",
+    "uisettings": "yaml",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal. A safe place to learn and execute commands.\u001b[m\r\n"
   },
   "backend": {
     "imageid": "docker"
