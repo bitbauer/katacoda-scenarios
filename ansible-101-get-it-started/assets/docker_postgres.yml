@@ -26,9 +26,9 @@
         name: "{{ postgres_container_name }}"
         image: "postgres:{{ postgres_version }}"
         state: started
-      restart_policy: always
-      env: "{{ postgres_container_env }}"
-      volumes_from: "{{ [postgres_container_datavolume] }}"
+        restart_policy: always
+        env: "{{ postgres_container_env }}"
+        volumes_from: "{{ [postgres_container_datavolume] }}"
       exposed_ports: "{{ [postgres_container_port] }}"
 
     - name: inspect postgres container

@@ -7,7 +7,7 @@
         install_recommends: no
 
 - name: Include a play after another play
-  include: docker_postgres.yml
+  import_playbook: docker_postgres.yml
 
 - hosts: local
   remote_user: root
