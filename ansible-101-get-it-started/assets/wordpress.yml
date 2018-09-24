@@ -2,9 +2,11 @@
   remote_user: root
   pre_tasks:
     - apt:
-        name: docker-py
+        name: python-pip
         state: latest
         install_recommends: no
+    - pip:
+        name: docker-py
 
 - name: Include a play after another play
   import_playbook: docker_postgres.yml
