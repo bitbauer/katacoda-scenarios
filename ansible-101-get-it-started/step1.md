@@ -7,6 +7,7 @@ Ansible needs to be installed on the control node. Packages are available for Ub
 
 First add package repository for latest release:
 `apt-add-repository -y ppa:ansible/ansible`{{execute HOST1}}
+
 and now install Ansible:
 `apt-get update && apt-get install -y ansible`{{execute HOST1}}
 
