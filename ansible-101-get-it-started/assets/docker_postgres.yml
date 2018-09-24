@@ -30,6 +30,7 @@
         env: "{{ postgres_container_env }}"
         volumes_from: "{{ [postgres_container_datavolume] }}"
         exposed_ports: "{{ [postgres_container_port] }}"
+        published_ports: "{{ [postgres_container_port:postgres_container_port] }}"
 
     - name: inspect postgres container
       command: >
