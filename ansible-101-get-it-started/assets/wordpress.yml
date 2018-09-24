@@ -6,7 +6,10 @@
         state: latest
         install_recommends: no
     - pip:
-        name: docker-py
+        name: "{{ item }}"
+      loop:
+        - docker-py
+        - psycopg2
 
 - name: Include a play after another play
   import_playbook: docker_postgres.yml
