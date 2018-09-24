@@ -3,5 +3,4 @@ apt-get update >/dev/null
 
 echo "Installing ansible apt repository ..."
 apt-get install -y software-properties-common >/dev/null
-apt-add-repository -y ppa:ansible/ansible >/dev/null
-apt-get update >/dev/null
+apt-add-repository -y ppa:ansible/ansible && apt-get update >/dev/null
