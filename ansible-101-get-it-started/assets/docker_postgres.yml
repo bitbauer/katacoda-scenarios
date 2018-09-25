@@ -45,9 +45,6 @@
     - set_fact:
         postgres_container_address: "{{ postgres_address_result.stdout }}"
 
-    - debug:
-        var: postgres_address_result
-
     - set_fact:
         postgres_container_address: "{{ postgres_address_result.stdout }}"
         postgres_local_address: "docker"
