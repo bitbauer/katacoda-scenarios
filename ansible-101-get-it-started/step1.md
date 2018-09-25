@@ -6,7 +6,7 @@ It can automates cloud provisioning, system configuration, application deploymen
 Ansible needs to be installed on the control node. Packages are available for Ubuntu 16.04+, CentOS 7 and more distributions.
 
 First add package repository for latest release:
-`apt-add-repository -y ppa:ansible/ansible`{{execute HOST1}}
+`until apt-add-repository -y ppa:ansible/ansible; do sleep 3; done`{{execute HOST1}}
 
 After that install Ansible:
 `apt-get update && apt-get install -y ansible`{{execute HOST1}}

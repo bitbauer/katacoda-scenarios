@@ -52,6 +52,14 @@
         postgres_container_address: "{{ postgres_address_result.stdout }}"
         postgres_local_address: "docker"
 
+    - name: "Wait 30 seconds for port {{ postgres_container_port }}"
+      wait_for:
+        host: "{{ postgres_local_address }}"
+        port: 5432
+        connect_timeout: 3
+        timeout: 30
+        state: started
+
     - postgresql_user:
         name: "foo"
         password: "bar"
